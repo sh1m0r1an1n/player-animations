@@ -103,6 +103,22 @@
       width: 0;
       background: #ff0000;
       border-radius: 2px;
+      position: relative;
+    }
+
+    .progress-slider::after {
+      content: '';
+      position: absolute;
+      right: -8px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      background: #ff0000;
+      border: 3px solid white;
+      border-radius: 50%;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+      z-index: 1;
     }
   </style>
 </head>

@@ -3,7 +3,7 @@
 
 # Библиотека для создания видеоплеера
 
-[GitHub Pages](https://sh1m0r1an1n.github.io/video-player-jslib)
+[GitHub Pages](https://sh1m0r1an1n.github.io/player-animations)
 
 Минимальный набор инструментов, который нужен для создания своего видеоплеера. Все элементы можно кастомизировать на свой вкус и цвет.
 

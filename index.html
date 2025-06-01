@@ -3,7 +3,7 @@
 <head>
   <title>Пример подключения плеера</title>
   <meta charset="utf-8">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" href="static/favicon.svg" type="image/svg+xml">
   <style>
@@ -81,9 +81,23 @@
     .time-container {
       color: white;
       font-family: 'Roboto', sans-serif;
-      font-size: 14px;
+      font-size: 16px;
       padding: 4px 0;
-      text-align: center;
+      display: flex;
+      align-items: center;
+    }
+
+    .progress-container {
+      flex-grow: 1;
+      height: 4px;
+      margin: 0 10px;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .progress-slider {
+      height: 100%;
+      width: 0;
+      background: #f8104d;
     }
   </style>
 </head>
@@ -109,10 +123,11 @@
       </div>
       <div class="time-container">
         <span class="js-current-time">00:00:00</span>
-        —
-        <span class="js-duration">00:00:00</span>
       </div>
       <div class="spacer"></div>
+      <div class="time-container">
+        <span class="js-duration">00:00:00</span>
+      </div>
       <button class="js-fullscreen-button control-button">
         <i class="fa fa-expand control-icon" aria-hidden="true"></i>
       </button>

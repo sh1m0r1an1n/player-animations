@@ -61,7 +61,7 @@ button::-moz-focus-inner {
   display: flex;
   align-items: center;
   flex-grow: 1;
-  margin: 0 10px;
+  margin: 0 -4px;
 }
 
 .viewing-time,
@@ -82,7 +82,7 @@ button::-moz-focus-inner {
   display: flex;
   align-items: center;
   position: relative;
-  margin: 0 10px;
+  margin: 0 10px 0 7px;
 }
 
 .progress-slider {

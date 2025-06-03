@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+.video-player {
+  width: 800px;
+  height: 600px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+}
+
+.video-container {
+  flex-grow: 1;
+}
+
+.controls-container {
+  background: black;
+  min-height: 38px;
+  padding: 2px 1px 3px 0;
+  display: flex;
+  align-items: center;
+}
+
+.control-button {
+  padding: 4px;
+  margin-right: 2px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-button:last-child {
+  margin-right: 0;
+}
+
+.control-icon {
+  color: white;
+  font-size: 20px;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.control-button[hidden]:not([hidden="false"]) {
+  display: none;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.toggle-group {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin-right: 2px;
+}
+
+.toggle-group .control-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  margin-right: 0;
+}
+
+.time-container {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
+}
+
+.progress-container {
+  flex-grow: 1;
+  height: 4px;
+  margin: 0 10px;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.progress-slider {
+  height: 100%;
+  width: 0;
+  background: #ff0000;
+  border-radius: 2px;
+  position: relative;
+}
+
+.progress-slider::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: #ff0000;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transition: opacity 300ms ease-out;
+  opacity: 0;
+}
+
+.progress-container:hover .progress-slider::after {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+} 

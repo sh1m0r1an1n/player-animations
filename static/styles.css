@@ -34,7 +34,7 @@ button::-moz-focus-inner {
   flex-grow: 1;
 }
 
-.controls-container {
+.bottom-controls {
   background: black;
   min-height: 38px;
   padding: 2px 1px 3px 0;
@@ -42,18 +42,86 @@ button::-moz-focus-inner {
   align-items: center;
 }
 
+.left-buttons,
+.right-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.player-button {
+  margin-right: 2px;
+}
+
+.left-buttons .player-button:last-child,
+.right-buttons .player-button:last-child {
+  margin-right: 0;
+}
+
+.viewing-panel {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+.viewing-time,
+.video-duration {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.viewing-progressbar {
+  flex-grow: 1;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 10px;
+}
+
+.progress-slider {
+  height: 100%;
+  width: 0;
+  background: #ff0000;
+  border-radius: 2px;
+  position: relative;
+}
+
+.progress-slider::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: #ff0000;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transition: opacity 300ms ease-out;
+  opacity: 0;
+}
+
+.viewing-progressbar:hover .progress-slider::after {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
 .control-button {
   padding: 4px;
-  margin-right: 2px;
   width: 36px;
   height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.control-button:last-child {
-  margin-right: 0;
 }
 
 .control-icon {
@@ -95,45 +163,4 @@ button::-moz-focus-inner {
   padding: 4px 0;
   display: flex;
   align-items: center;
-}
-
-.progress-container {
-  flex-grow: 1;
-  height: 4px;
-  margin: 0 10px;
-  background: rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
-}
-
-.progress-slider {
-  height: 100%;
-  width: 0;
-  background: #ff0000;
-  border-radius: 2px;
-  position: relative;
-}
-
-.progress-slider::after {
-  content: '';
-  position: absolute;
-  right: -8px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 8px;
-  height: 8px;
-  background: #ff0000;
-  border: 3px solid white;
-  border-radius: 50%;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-  z-index: 1;
-  transition: opacity 300ms ease-out;
-  opacity: 0;
-}
-
-.progress-container:hover .progress-slider::after {
-  opacity: 1;
-  transition: opacity 300ms ease-in;
 } 

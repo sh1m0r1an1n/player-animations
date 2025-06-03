@@ -11,35 +11,43 @@
 <body>
   <div id="player" class="video-player">
     <div class="js-video-container video-container"></div>
-    <div class="controls-container">
-      <div class="toggle-group play-toggle">
-        <button class="js-play-button control-button">
-          <i class="fa fa-play control-icon" aria-hidden="true"></i>
-        </button>
-        <button class="js-pause-button control-button" hidden>
-          <i class="fa fa-pause control-icon" aria-hidden="true"></i>
-        </button>
+    <div class="bottom-controls">
+      <div class="left-buttons">
+        <div class="player-button play-button">
+          <button class="js-play-button control-button">
+            <i class="fa fa-play control-icon" aria-hidden="true"></i>
+          </button>
+          <button class="js-pause-button control-button" hidden>
+            <i class="fa fa-pause control-icon" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="player-button volume-button">
+          <button class="js-volume-button control-button">
+            <i class="fa fa-volume-off control-icon" aria-hidden="true"></i>
+          </button>
+          <button class="js-mute-button control-button" hidden>
+            <i class="fa fa-volume-up control-icon" aria-hidden="true"></i>
+          </button>
+        </div>
       </div>
-      <div class="toggle-group volume-toggle">
-        <button class="js-volume-button control-button">
-          <i class="fa fa-volume-off control-icon" aria-hidden="true"></i>
-        </button>
-        <button class="js-mute-button control-button" hidden>
-          <i class="fa fa-volume-up control-icon" aria-hidden="true"></i>
-        </button>
+      <div class="viewing-panel">
+        <div class="viewing-time">
+          <span class="js-current-time">00:00:00</span>
+        </div>
+        <div class="viewing-progressbar js-progress">
+          <div class="progress-slider js-progress-slider"></div>
+        </div>
+        <div class="video-duration">
+          <span class="js-duration">00:00:00</span>
+        </div>
       </div>
-      <div class="time-container">
-        <span class="js-current-time">00:00:00</span>
+      <div class="right-buttons">
+        <div class="player-button fullscreen-button">
+          <button class="js-fullscreen-button control-button">
+            <i class="fa fa-expand control-icon" aria-hidden="true"></i>
+          </button>
+        </div>
       </div>
-      <div class="progress-container js-progress">
-        <div class="progress-slider js-progress-slider"></div>
-      </div>
-      <div class="time-container">
-        <span class="js-duration">00:00:00</span>
-      </div>
-      <button class="js-fullscreen-button control-button">
-        <i class="fa fa-expand control-icon" aria-hidden="true"></i>
-      </button>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
